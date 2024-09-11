@@ -1,0 +1,18 @@
+@import url('https://fonts.googleapis.com/css2?family=Bungee+Inline&display=swap');
+
+header{
+    display: flex;
+    align-items: center;
+}
+h1{
+    font-family: "Bungee Inline", sans-serif;
+    margin: 2%;
+    background-color: #5ea7ec;
+    padding: 3%;
+    border-radius: 5px 30px 5px 5px;
+}
+
+header img{
+    width: 10%;
+    float: left;
+}
