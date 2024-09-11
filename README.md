@@ -1,6 +1,8 @@
 # juegoMemoria
 Juego de la memoria para el desafío Dev 2024
 
+Puedes probarlo desde: https://edme88.github.io/juegoMemoria/
+
 ¡Enterate cómo participar del DESAFÍO DEV’s DAY 24!🚀💻
 
 Bases y Condiciones
