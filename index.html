@@ -22,25 +22,27 @@
         <h2>Reglas:</h2>
         <p>Da la vuelta a 2 cartas. Si son iguales, se fijan y puedes seguir tu turno. Sino, se vuelven a esconder y toca otro turno. La partida se terminará cuando estén todas las parejas encontradas. Cuidado, se te acaba el tiempo. </p>
     </section>
-    <section>
-        <h2>Datos:</h2>
-        <label for="nombre">Nombre:</label>
-        <input name="nombre" id="nombre" type="text" maxlength="40" size="60">
-    </section>
-    <section>
-        <button type="button">
-            🦁 <br>
-            Animales
-        </button>
-        <button type="button">
-            🟢 <br>
-            Figuras
-        </button>
-        <button type="button">
-            🍒  <br>
-            Frutas
-        </button>
-    </section>
+    <form></form>
+        <section>
+            <h2>Datos:</h2>
+            <label for="nombre">Nombre:</label>
+            <input name="nombre" id="nombre" type="text" maxlength="40" size="40">
+        </section>
+        <section class="elegiJugar">
+            <button type="button" onclick="cargarJuego(nombre.value, `animales`)">
+                <span>🦁</span> <br>
+                Animales
+            </button>
+            <button type="button" onclick="cargarJuego()">
+                <span>🟢</span> <br>
+                Figuras
+            </button>
+            <button type="button" onclick="cargarJuego()">
+                <span>🍒</span>  <br>
+                Frutas
+            </button>
+        </section>
+    </form>
 </main>
 </body>
 </html>

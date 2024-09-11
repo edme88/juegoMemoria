@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="description" content="Juego de la Memoria para Desafío Devs 2024">
+    <meta name="keywords" content="Juego, Memoria, Darwoft, 2024, Devs, Desafío">
+    <meta name="author" content="Agustina Edmé Aliciardi">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Juego de la Memoria</title>
+    <link rel="icon" type="image/png" href="images/logo.png">
+    <script type="text/javascript" src="script.js"></script>
+    <link rel="stylesheet" href="miEstilo.css" type="text/css">
+</head>
+
+<body>
+<header>
+    <img src="images/logo.png" alt="Logo del Juego">
+    <h1 class="nombreJuego">Juego de la Memoria</h1>
+</header>
+<main>
+    <canvas id="gameCanvas" width="820" height="320">
+        Tu navegador no soporta el tag de HTML5 canvas.
+    </canvas>
+    <section>
+        <h2>Tiempo: <span id="timer">00:00:00</span></h2>
+        <h2>Numero de turnos: <span id="numTurno">0</span></h2>
+        <button id="menu" onclick="retourMenu()">
+            <img src="images/menu.png" alt="LogoMenu">
+            Menu
+        </button>
+    </section>
+</main>
+</body>
+</html>

@@ -1,5 +1,9 @@
 @import url('https://fonts.googleapis.com/css2?family=Bungee+Inline&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap');
 
+body{
+    font-family: "Roboto", sans-serif;
+}
 header{
     display: flex;
     align-items: center;
@@ -14,5 +18,34 @@ h1{
 
 header img{
     width: 10%;
+    min-width: 98px;
     float: left;
+}
+
+h2{
+    font-family: "Bungee Inline", sans-serif;
+    color: #5ecba4;
+}
+
+section{
+    margin: 0 10%;
+}
+
+button{
+    margin: 5% 10px;
+    background-color: #f1cc7d;
+    width: 8%;
+    border-radius: 7px;
+    min-width: 50px;
+    font-size: 1em;
+    font-weight: 700;
+    padding: 5px;
+}
+
+button:hover{
+    box-shadow: 3px 3px 3px gray;
+}
+
+.elegiJugar span{
+    font-size: 2rem;
 }
