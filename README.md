@@ -15,15 +15,16 @@ Bases y Condiciones
    Frameworks opcionales: React, Angular, Vue.js o librerías como VanillaJS.
    Backends permitidos: No es necesario, pero si el equipo desea implementar uno, pueden usar Node.js o cualquier backend que se integre con una API.
    Almacenamiento opcional: Se permite usar localStorage, sessionStorage o un servicio backend para guardar el progreso del juego.
-3. Criterios de Evaluación
-   Funcionalidad básica: El juego debe permitir a los jugadores hacer clic en las cartas para voltearlas e intentar hacer coincidir las parejas.
-   Interfaz de usuario: El juego debe ser visualmente atractivo y funcional en múltiples tamaños de pantalla (responsivo).
-   Comportamiento de las cartas: Las cartas deben volver a su posición inicial si no coinciden o quedarse descubiertas si son un par correcto.
-   Gestión del tiempo: Debe haber un contador que registre el tiempo transcurrido durante el juego.
-   Nivel de dificultad: Los equipos pueden implementar diferentes niveles de dificultad (más cartas, diferentes tamaños de tablero).
-   Calidad del código: Se evaluará la organización del código, su claridad, y si se siguen buenas prácticas (modularización, uso de componentes, etc.).
-   Optimización: Evaluar el rendimiento en dispositivos móviles y de escritorio.
-   Innovación: Características adicionales como sonidos, animaciones o temas personalizados (opcional).
+
+3. Criterios de Evaluación 
+[X] Funcionalidad básica: El juego debe permitir a los jugadores hacer clic en las cartas para voltearlas e intentar hacer coincidir las parejas.
+[ ] Interfaz de usuario: El juego debe ser visualmente atractivo y funcional en múltiples tamaños de pantalla (responsivo).
+[X] Comportamiento de las cartas: Las cartas deben volver a su posición inicial si no coinciden o quedarse descubiertas si son un par correcto.
+[X] Gestión del tiempo: Debe haber un contador que registre el tiempo transcurrido durante el juego.
+[ ] Nivel de dificultad: Los equipos pueden implementar diferentes niveles de dificultad (más cartas, diferentes tamaños de tablero).
+[ ] Calidad del código: Se evaluará la organización del código, su claridad, y si se siguen buenas prácticas (modularización, uso de componentes, etc.).
+[ ] Optimización: Evaluar el rendimiento en dispositivos móviles y de escritorio.
+[X] Innovación: Características adicionales como sonidos, animaciones o temas personalizados (opcional).
 4. Reglas
    El juego debe funcionar en los navegadores más populares (Chrome, Firefox, Safari).
    Los equipos deben trabajar en un repositorio GitHub y realizar commits frecuentes para mostrar el progreso.

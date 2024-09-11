@@ -130,6 +130,8 @@ const dibujarJuego = () => {
 
         if (selectedCards.length < 2 && !selectedCards.includes(index) && !matchedCards.includes(index)) {
             selectedCards.push(index);
+            const audioCard = new Audio("sounds/click1.wav");
+            audioCard.play();
             drawBoard();
 
             if (selectedCards.length === 2) {
@@ -150,8 +152,10 @@ const dibujarJuego = () => {
                     drawBoard();
 
                     if (matchedCards.length === shuffledCards.length) {
+                        const audioWin = new Audio("sounds/Randomize15.ogg");
+                        audioWin.play();
                         clearInterval(timerId);
-                        alert(`Felicidades ${nombreUsuario}! \n Has completado el juego en ${turns.toString()} turnos.\n\n Repetición con otro tema!`);
+                        alert(`Felicidades ${nombreUsuario}! \n Has completado el juego en ${turns.toString()} turnos.`);
                     }
                 }, 1000);
             }
