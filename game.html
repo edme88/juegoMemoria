@@ -18,13 +18,14 @@
     <h1 class="nombreJuego">Juego de la Memoria</h1>
 </header>
 <main>
-    <canvas id="gameCanvas" width="820" height="320">
+    <canvas id="gameCanvas" width="620" height="418">
         Tu navegador no soporta el tag de HTML5 canvas.
     </canvas>
     <section>
         <h2>Tiempo: <span id="timer">00:00:00</span></h2>
         <h2>Numero de turnos: <span id="numTurno">0</span></h2>
-        <button id="menu" onclick="retourMenu()">
+        <h2>Nivel: <span id="nivel"></span></h2>
+        <button id="menu" class="back" onclick="retourMenu()">
             <img src="images/menu.png" alt="LogoMenu">
             Menu
         </button>

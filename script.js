@@ -4,13 +4,14 @@
  * @param {String} nombreUsuario - Nombre ingresado por el usuario
  * äparam {String} tema - Tema de juego seleccionado por el usuario: Animales, Figuras, Frutas
  */
-const cargarJuego = (nombreUsuario, tema) => {
+const cargarJuego = (nombreUsuario, tema, nivel) => {
     if(nombreUsuario==""){
         alert("Tienes que completar tu nombre de usuario para poder jugar!");
     }else{
         localStorage.setItem("nombreUsuario", nombreUsuario);
         localStorage.setItem("tema", tema);
-        window.open("game.html");
+        localStorage.setItem("nivel", nivel);
+        window.open("game.html", "_self");
     }
 }
 
@@ -22,18 +23,20 @@ const dibujarJuego = () => {
     //Obtener datos del localStorage
     const nombreUsuario = localStorage.getItem("nombreUsuario");
     const tema = localStorage.getItem("tema");
+    const nivel = localStorage.getItem("nivel");
 
     //Dibujo de Canvas
     const canvas = document.getElementById('gameCanvas');
     const ctx = canvas.getContext('2d');
 
     let nombreTours = document.getElementById("numTurno");
+    document.getElementById("nivel").textContent = nivel;
 
     const cardWidth = 80;
     const cardHeight = 80;
     const cardSpacing = 20;
-    const numRows = 3;
-    const numCols = 8;
+    let numRows = 4;
+    let numCols = 6;
     let selectedCards = [];
     let matchedCards = [];
     let cards;
@@ -47,7 +50,15 @@ const dibujarJuego = () => {
         cards = ['🍎', '🍓', '🍌', '🍊', '🍇', '🍏', '🍉', '🍐', '🍑', '🍒', '🍍', '🥝'];
     }
 
-    // mezcla un arreglo de cartas al concatenarlo consigo mismo y luego mezclar el arreglo resultante
+    //slice(): Crea una copia del array seleccionando los elementos que especificas, sin modificar el array original.
+    if(nivel==="medio"){
+        cards = cards.slice(0, 10);
+        numCols = numCols-1;
+    }else if(nivel==="facil"){
+        cards = cards.slice(0, 8);
+        numCols = numCols-2;
+    }
+    // Necesitamos duplicar las cartas para hacer pares
     let shuffledCards = shuffle(cards.concat(cards));
 
     //cronómetro
@@ -83,7 +94,7 @@ const dibujarJuego = () => {
      * @param {boolean} visible - determina si la carta debe ser visible o no
      */
     function drawCard(x, y, value, visible) {
-        const margen = 18;
+        const margen = 10;
         ctx.fillStyle = visible ? '#fff' : '#000';
         ctx.fillRect(x, y, cardWidth, cardHeight);
         if (visible) {
@@ -98,6 +109,7 @@ const dibujarJuego = () => {
      * @method drawBoard
      */
     function drawBoard() {
+
         ctx.clearRect(0, 0, canvas.width, canvas.height);
         for (let row = 0; row < numRows; row++) {
             for (let col = 0; col < numCols; col++) {
@@ -107,7 +119,6 @@ const dibujarJuego = () => {
 
                 let card = shuffledCards[index];
                 let visible = selectedCards.includes(index) || matchedCards.includes(index);
-
                 drawCard(x, y, card, visible);
             }
         }

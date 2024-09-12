@@ -29,18 +29,26 @@
             <input name="nombre" id="nombre" type="text" maxlength="40" size="40">
         </section>
         <section class="elegiJugar">
-            <button type="button" onclick="cargarJuego(nombre.value, `animales`)">
+            <button type="button" onclick="cargarJuego(nombre.value, `animales`, nivel.value)">
                 <span>🦁</span> <br>
                 Animales
             </button>
-            <button type="button" onclick="cargarJuego(nombre.value, `figuras`)">
+            <button type="button" onclick="cargarJuego(nombre.value, `figuras`, nivel.value)">
                 <span>🟢</span> <br>
                 Figuras
             </button>
-            <button type="button" onclick="cargarJuego(nombre.value, `frutas`)">
+            <button type="button" onclick="cargarJuego(nombre.value, `frutas`, nivel.value)">
                 <span>🍒</span>  <br>
                 Frutas
             </button>
+        </section>
+        <section>
+            <label for="nivel">Nivel:</label>
+            <select id="nivel" name="nivel">
+                <option value="dificil">Difícil</option>
+                <option value="medio">Medio</option>
+                <option value="facil">Fácil</option>
+            </select>
         </section>
     </form>
 </main>
